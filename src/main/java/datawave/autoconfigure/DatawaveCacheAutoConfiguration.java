@@ -1,7 +1,6 @@
 package datawave.autoconfigure;
 
 import datawave.autoconfigure.DatawaveCacheAutoConfiguration.CacheConfigurationImportSelector;
-
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
