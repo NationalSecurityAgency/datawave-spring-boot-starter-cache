@@ -43,6 +43,11 @@
             <optional>true</optional>
         </dependency>
         <dependency>
+            <groupId>org.cache2k</groupId>
+            <artifactId>cache2k-spring</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-autoconfigure</artifactId>
         </dependency>
