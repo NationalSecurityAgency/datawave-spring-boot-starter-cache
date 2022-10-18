@@ -22,6 +22,7 @@ final class CacheConfigurations {
         mappings.put(CacheType.GENERIC, GenericCacheConfiguration.class);
         mappings.put(CacheType.EHCACHE, EhCacheCacheConfiguration.class);
         mappings.put(CacheType.HAZELCAST, HazelcastCacheConfiguration.class);
+        mappings.put(CacheType.CACHE2K, Cache2kCacheConfiguration.class);
         mappings.put(CacheType.CAFFEINE, CaffeineCacheConfiguration.class);
         mappings.put(CacheType.SIMPLE, SimpleCacheConfiguration.class);
         mappings.put(CacheType.NONE, NoOpCacheConfiguration.class);
