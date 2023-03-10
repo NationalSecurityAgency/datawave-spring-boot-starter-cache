@@ -25,11 +25,12 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.ImportSelector;
 import org.springframework.core.type.AnnotationMetadata;
-import org.springframework.util.Assert;
 
 import java.util.Arrays;
 import java.util.EnumSet;
 import java.util.List;
+
+import static org.springframework.util.Assert.notNull;
 
 @Configuration
 @ConditionalOnClass(CacheManager.class)
@@ -67,8 +68,8 @@ public class DatawaveCacheAutoConfiguration {
         
         @Override
         public void afterPropertiesSet() {
-            Assert.notNull(this.cacheManager.getIfAvailable(), () -> "No cache manager could be auto-configured, check your configuration "
-                            + "(caching type is '" + this.cacheProperties.getType() + "')");
+            notNull(this.cacheManager.getIfAvailable(), () -> "No cache manager could be auto-configured, check your configuration " + "(caching type is '"
+                            + this.cacheProperties.getType() + "')");
         }
     }
     

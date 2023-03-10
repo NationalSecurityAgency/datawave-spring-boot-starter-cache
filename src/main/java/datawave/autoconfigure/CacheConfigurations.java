@@ -1,11 +1,12 @@
 package datawave.autoconfigure;
 
 import org.springframework.boot.autoconfigure.cache.CacheType;
-import org.springframework.util.Assert;
 
 import java.util.Collections;
 import java.util.EnumMap;
 import java.util.Map;
+
+import static org.springframework.util.Assert.state;
 
 /**
  * Maps supported {@link CacheType} values to/from the associated configuration classes that configure the named cache type. This is effectively a copy of
@@ -32,7 +33,7 @@ final class CacheConfigurations {
     
     public static String getConfigurationClass(CacheType cacheType) {
         Class<?> configurationClass = MAPPINGS.get(cacheType);
-        Assert.state(configurationClass != null, () -> "Unknown cache type " + cacheType);
+        state(configurationClass != null, () -> "Unknown cache type " + cacheType);
         return configurationClass.getName();
     }
     
