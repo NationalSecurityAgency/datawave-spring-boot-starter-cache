@@ -1,5 +1,8 @@
 package datawave.autoconfigure;
 
+import java.util.Collection;
+import java.util.function.Function;
+
 import org.cache2k.Cache2kBuilder;
 import org.cache2k.extra.spring.SpringCache2kCacheManager;
 import org.springframework.beans.factory.ObjectProvider;
@@ -14,9 +17,6 @@ import org.springframework.context.annotation.Conditional;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 import org.springframework.util.CollectionUtils;
-
-import java.util.Collection;
-import java.util.function.Function;
 
 @Configuration(proxyBeanMethods = false)
 @ConditionalOnClass({Cache2kBuilder.class, SpringCache2kCacheManager.class})

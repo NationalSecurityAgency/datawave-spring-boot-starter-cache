@@ -1,6 +1,11 @@
 package datawave.autoconfigure;
 
-import datawave.autoconfigure.DatawaveCacheAutoConfiguration.CacheConfigurationImportSelector;
+import static org.springframework.util.Assert.notNull;
+
+import java.util.Arrays;
+import java.util.EnumSet;
+import java.util.List;
+
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.boot.autoconfigure.AutoConfigureAfter;
@@ -26,11 +31,7 @@ import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.ImportSelector;
 import org.springframework.core.type.AnnotationMetadata;
 
-import java.util.Arrays;
-import java.util.EnumSet;
-import java.util.List;
-
-import static org.springframework.util.Assert.notNull;
+import datawave.autoconfigure.DatawaveCacheAutoConfiguration.CacheConfigurationImportSelector;
 
 @Configuration
 @ConditionalOnClass(CacheManager.class)

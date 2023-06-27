@@ -1,12 +1,12 @@
 package datawave.autoconfigure;
 
-import org.springframework.boot.autoconfigure.cache.CacheType;
+import static org.springframework.util.Assert.state;
 
 import java.util.Collections;
 import java.util.EnumMap;
 import java.util.Map;
 
-import static org.springframework.util.Assert.state;
+import org.springframework.boot.autoconfigure.cache.CacheType;
 
 /**
  * Maps supported {@link CacheType} values to/from the associated configuration classes that configure the named cache type. This is effectively a copy of
